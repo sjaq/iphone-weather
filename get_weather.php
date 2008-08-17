@@ -11,7 +11,6 @@
 	
 		public function __construct($loc, $deg) {
 			$this->loc   = $this->safe($this->to_loc($loc));
-			print $this->loc;
 			$this->deg   = $this->safe(strtolower($deg));
 			$this->cache = './cache/' . $this->deg . strtolower($this->loc);
 		}
