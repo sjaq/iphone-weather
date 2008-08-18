@@ -26,6 +26,9 @@
 	$refresh = (isset($_GET['refresh']) && $_GET['refresh'] >= (60*30))? $_GET['refresh'] : 60*30;
 	$ext_stylesheet = isset($_GET['style'])? $_GET['style'] : '';
 	$font = isset($_GET['font'])? $_GET['font'] : 'Helvetica Neue';
+	$font_color = isset($_GET['color'])? $_GET['color'] : 'fff';
+	$font_size = isset($_GET['size'])? $_GET['size'] : '20';
+	$opacity = isset($_GET['opacity'])? $_GET['opacity'] : '1';
 	
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
@@ -46,14 +49,15 @@
 			body {
 				width: 320px;
 				background: transparent;
-				color: #fff;
-				font: 20px <?php echo $font ?>;
+				color: #<?php echo $font_color ?>;
+				font: <?php echo $font_size ?>px <?php echo $font ?>;
 			}
 			
 			#weather {
 				font-weight: bold;
 				position: absolute;
 				right: 10px;
+				opacity: <?php echo $opacity ?>;
 			}
 		</style>
 		<link rel="stylesheet" href="<?php echo $ext_stylesheet ?>" type="text/css" media="screen" title="custom style" charset="utf-8" />

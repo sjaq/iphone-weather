@@ -10,7 +10,12 @@ You can append `&refresh=[TIMEINSECONDS]` to the frame src to change the refresh
 ## Custom styles:
 Just append `&style=http://location.to.your/style.css` to the frame src and it will load that style, you have to style #weather p..
 
-To only change the font append &font=FontName to the frame src
+### You can change some styles via the url
+_Append:_
+`&font=FontName to change the font.
+&color=HEX to change the color, be sure to leave out the # part.
+&opacity=OPACITY to change the opacity (must be a number between 0 and 1)
+&size=SIZEINPX to change the font size`
 
 ## Known Issues
 If you're getting a "ur doin somthn wrng" message check your location and degree type again. I've seen people filling in XXXXXX_c or something like that as their location you need to remove the "_c" part and try again. And your location should only contain your location ID not the entire http://weather.yahoo.com url.
